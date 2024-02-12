@@ -46,6 +46,12 @@ CREATE TABLE tb_veterinarias(
 )
 
 INSERT INTO tb_veterinarias(nombre_veterinaria, direccion_veterinaria) VALUES ("Huellitas", "San Luis");
+INSERT INTO tb_veterinarias(nombre_veterinaria, direccion_veterinaria) VALUES ("Huellitas", "Cojutepeque");
+INSERT INTO tb_veterinarias(nombre_veterinaria, direccion_veterinaria) VALUES ("Patitas peludas", "San Luis");
+INSERT INTO tb_veterinarias(nombre_veterinaria, direccion_veterinaria) VALUES ("Sonrisitas", "Mejicanos");
+INSERT INTO tb_veterinarias(nombre_veterinaria, direccion_veterinaria) VALUES ("Amigos peludos", "San Luis");
+
+SELECT * FROM tb_veterinarias;
 
 CREATE TABLE tb_veterinarios(
 	id_veterinario INT AUTO_INCREMENT PRIMARY KEY,
@@ -71,17 +77,50 @@ CREATE TABLE tb_veterinarios(
 	REFERENCES tb_horarios_veterinarios(id_horario_veterinario)
 )
 
-INSERT INTO tb_veterinarios(nombre_veterinario, apellido_veterinario, edad_veterinario, fecha_inicio_veterinario, id_genero, id_especialidad_veterinario, id_veterinaria, id_horario_veterinario) VALUES ("Pedro", "Poca Sangre", 20, '2024-03-12', 1, 1, 1, 1);
-INSERT INTO tb_veterinarios(nombre_veterinario, apellido_veterinario, edad_veterinario, fecha_inicio_veterinario, id_genero, id_especialidad_veterinario, id_veterinaria, id_horario_veterinario) VALUES ("Juan", "Velsaques", 31, '2024-03-12', 1, 1, 1, 1);
-INSERT INTO tb_veterinarios(nombre_veterinario, apellido_veterinario, edad_veterinario, fecha_inicio_veterinario, id_genero, id_especialidad_veterinario, id_veterinaria, id_horario_veterinario) VALUES ("Luis", "Cordoba", 44, '2024-03-12', 1, 1, 1, 1);
-INSERT INTO tb_veterinarios(nombre_veterinario, apellido_veterinario, edad_veterinario, fecha_inicio_veterinario, id_genero, id_especialidad_veterinario, id_veterinaria, id_horario_veterinario) VALUES ("Carlos", "Belen", 18, '2024-03-12', 1, 1, 1, 1);
-INSERT INTO tb_veterinarios(nombre_veterinario, apellido_veterinario, edad_veterinario, fecha_inicio_veterinario, id_genero, id_especialidad_veterinario, id_veterinaria, id_horario_veterinario) VALUES ("Will", "Guadalupe", 45, '2024-03-12', 1, 1, 1, 1);
-INSERT INTO tb_veterinarios(nombre_veterinario, apellido_veterinario, edad_veterinario, fecha_inicio_veterinario, id_genero, id_especialidad_veterinario, id_veterinaria, id_horario_veterinario) VALUES ("Allan", "Capos", 63, '2024-03-12', 1, 1, 1, 1);
-INSERT INTO tb_veterinarios(nombre_veterinario, apellido_veterinario, edad_veterinario, fecha_inicio_veterinario, id_genero, id_especialidad_veterinario, id_veterinaria, id_horario_veterinario) VALUES ("DK", "Fuentes", 25, '2024-03-12', 1, 1, 1, 1);
-INSERT INTO tb_veterinarios(nombre_veterinario, apellido_veterinario, edad_veterinario, fecha_inicio_veterinario, id_genero, id_especialidad_veterinario, id_veterinaria, id_horario_veterinario) VALUES ("Julio", "Sanchez", 18, '2024-03-12', 1, 1, 1, 1);
+INSERT INTO tb_veterinarios(nombre_veterinario, apellido_veterinario, edad_veterinario, fecha_inicio_veterinario, id_genero, id_especialidad_veterinario, id_veterinaria, id_horario_veterinario) 
+VALUES ("Pedro", "Poca Sangre", 20, '2024-03-12', 1, 1, 1, 1);
 
-SELECT * FROM tb_veterinarios
+INSERT INTO tb_veterinarios(nombre_veterinario, apellido_veterinario, edad_veterinario, fecha_inicio_veterinario, id_genero, id_especialidad_veterinario, id_veterinaria, id_horario_veterinario)  
+VALUES ("Juan", "Velsaques", 31, '2024-03-12', 1, 1, 1, 1);
 
+INSERT INTO tb_veterinarios(nombre_veterinario, apellido_veterinario, edad_veterinario, fecha_inicio_veterinario, id_genero, id_especialidad_veterinario, id_veterinaria, id_horario_veterinario) 
+VALUES ("Luis", "Cordoba", 44, '2024-03-12', 1, 1, 1, 1);
+
+INSERT INTO tb_veterinarios(nombre_veterinario, apellido_veterinario, edad_veterinario, fecha_inicio_veterinario, id_genero, id_especialidad_veterinario, id_veterinaria, id_horario_veterinario) 
+VALUES ("Carlos", "Belen", 18, '2024-03-12', 1, 1, 1, 1);
+
+INSERT INTO tb_veterinarios(nombre_veterinario, apellido_veterinario, edad_veterinario, fecha_inicio_veterinario, id_genero, id_especialidad_veterinario, id_veterinaria, id_horario_veterinario) 
+VALUES ("Will", "Guadalupe", 45, '2024-03-12', 1, 1, 1, 1);
+
+INSERT INTO tb_veterinarios(nombre_veterinario, apellido_veterinario, edad_veterinario, fecha_inicio_veterinario, id_genero, id_especialidad_veterinario, id_veterinaria, id_horario_veterinario) 
+VALUES ("Allan", "Capos", 63, '2024-03-12', 1, 1, 1, 1);
+
+INSERT INTO tb_veterinarios(nombre_veterinario, apellido_veterinario, edad_veterinario, fecha_inicio_veterinario, id_genero, id_especialidad_veterinario, id_veterinaria, id_horario_veterinario) 
+VALUES ("DK", "Fuentes", 25, '2024-03-12', 1, 1, 1, 1);
+
+INSERT INTO tb_veterinarios(nombre_veterinario, apellido_veterinario, edad_veterinario, fecha_inicio_veterinario, id_genero, id_especialidad_veterinario, id_veterinaria, id_horario_veterinario) 
+VALUES ("Julio", "Sanchez", 18, '2024-03-12', 1, 1, 1, 1);
+
+INSERT INTO tb_veterinarios(nombre_veterinario, apellido_veterinario, edad_veterinario, fecha_inicio_veterinario, id_genero, id_especialidad_veterinario, id_veterinaria, id_horario_veterinario) 
+VALUES ("David", "Castillo", 35, '2024-10-12', 1, 1, 5, 1);
+
+
+INSERT INTO tb_veterinarios(nombre_veterinario, apellido_veterinario, edad_veterinario, fecha_inicio_veterinario, id_genero, id_especialidad_veterinario, id_veterinaria, id_horario_veterinario) 
+VALUES ("Eduardo", "Gomez", 35, '2024-10-12', 1, 1, 4, 1);
+
+INSERT INTO tb_veterinarios(nombre_veterinario, apellido_veterinario, edad_veterinario, fecha_inicio_veterinario, id_genero, id_especialidad_veterinario, id_veterinaria, id_horario_veterinario) 
+VALUES ("Lorena", "Berrios", 35, '2024-10-12', 2, 1, 4, 1);
+
+-- EJEMPLO DE UNA SUBCONSULTA --
+SELECT nombre_veterinario 
+FROM tb_veterinarios 
+WHERE id_veterinaria IN 
+(SELECT id_veterinaria FROM tb_veterinarias WHERE direccion_veterinaria = 'Mejicanos');
+
+
+
+-- EJEMPLO DE MIN
+ 
 SELECT MIN(`edad_veterinario`) AS EdadVeterinario FROM `tb_veterinarios`;
 
 CREATE TABLE tb_mascotas(
@@ -92,16 +131,13 @@ CREATE TABLE tb_mascotas(
 	numero_duenio_mascota INT,
 	tamanio_mascota FLOAT,
 	id_genero INT,
-	CONSTRAINT fk_mascotas_razas
-	FOREIGN KEY(id_genero) 
+	CONSTRAINT fk_mascotas_razas FOREIGN KEY(id_genero) 
 	REFERENCES tb_generos(id_genero),
 	id_raza INT,
-	CONSTRAINT fk_mascotas_genero 
-	FOREIGN KEY(id_raza) 
+	CONSTRAINT fk_mascotas_genero FOREIGN KEY(id_raza) 
 	REFERENCES tb_razas(id_raza),
 	id_tipo_animal INT,
-	CONSTRAINT fk_mascotas_tipos_animales 
-	FOREIGN KEY(id_tipo_animal) 
+	CONSTRAINT fk_mascotas_tipos_animales FOREIGN KEY(id_tipo_animal) 
 	REFERENCES tb_tipos_animales(id_tipo_animal)
 )
 
