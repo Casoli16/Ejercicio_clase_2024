@@ -156,3 +156,27 @@ CREATE TABLE tb_citas(
 	FOREIGN KEY(id_veterinario) 
 	REFERENCES tb_veterinarios(id_veterinario)
 )
+
+/*Ejemplo de Funcion de Agregado 'MIN'*/
+SELECT MIN(`edad_veterinario`) AS Edad_Veterinario FROM `tb_veterinarios`;
+
+/*Ejemplo de Funcion de Agregado 'MAX'*/
+SELECT MAX(`edad_veterinario`) AS Edad_Veterinario FROM `tb_veterinarios`;
+
+/*Ejemplo de ´Inner Join´*/
+-- Ejemplo Basico
+SELECT *
+FROM tb_veterinarios
+INNER JOIN tb_veterinarias
+ON tb_veterinarios.id_veterinaria = tb_veterinarias.id_veterinaria
+
+-- Ejemplo Pulido
+SELECT tb_veterinarios.nombre_veterinario AS "Nombre",
+tb_veterinarios.apellido_veterinario AS "Apellido",
+tb_veterinarios.edad_veterinario AS "Edad",
+tb_veterinarios.fecha_inicio_veterinario AS "Fecha de Nacimiento",
+tb_veterinarias.nombre_veterinaria AS "Veterinaria",
+tb_veterinarias.direccion_veterinaria AS "Dirección"
+FROM tb_veterinarios
+JOIN tb_veterinarias
+ON tb_veterinarios.id_veterinaria = tb_veterinarias.id_veterinaria
