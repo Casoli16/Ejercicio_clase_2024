@@ -111,12 +111,12 @@ VALUES ("Eduardo", "Gomez", 35, '2024-10-12', 1, 1, 4, 1);
 INSERT INTO tb_veterinarios(nombre_veterinario, apellido_veterinario, edad_veterinario, fecha_inicio_veterinario, id_genero, id_especialidad_veterinario, id_veterinaria, id_horario_veterinario) 
 VALUES ("Lorena", "Berrios", 35, '2024-10-12', 2, 1, 4, 1);
 
--- EJEMPLO DE UNA SUBCONSULTA --
+-- EJEMPLO DE UNA SUBCONSULTA (De la tabla veterinarios queremos que seleccione el nombre de los veterinarios
+-- que en la tabla veterinarias la direccion se encuentre en Mejicanos)
 SELECT nombre_veterinario 
 FROM tb_veterinarios 
 WHERE id_veterinaria IN 
 (SELECT id_veterinaria FROM tb_veterinarias WHERE direccion_veterinaria = 'Mejicanos');
-
 
 
 -- EJEMPLO DE MIN
