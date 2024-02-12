@@ -113,15 +113,15 @@ VALUES ("Lorena", "Berrios", 35, '2024-10-12', 2, 1, 4, 1);
 
 -- EJEMPLO DE UNA SUBCONSULTA (De la tabla veterinarios queremos que seleccione el nombre de los veterinarios
 -- que en la tabla veterinarias la direccion se encuentre en Mejicanos)
+
 SELECT nombre_veterinario 
 FROM tb_veterinarios 
 WHERE id_veterinaria IN 
 (SELECT id_veterinaria FROM tb_veterinarias WHERE direccion_veterinaria = 'Mejicanos');
 
-
 /*Ejemplo de Funcion de Agregado 'MIN'*/
 SELECT MIN(`edad_veterinario`) AS Edad_Veterinario FROM `tb_veterinarios`;
-
+ 
 /*Ejemplo de Funcion de Agregado 'MAX'*/
 SELECT MAX(`edad_veterinario`) AS Edad_Veterinario FROM `tb_veterinarios`;
 
@@ -142,10 +142,6 @@ tb_veterinarias.direccion_veterinaria AS "Dirección"
 FROM tb_veterinarios
 JOIN tb_veterinarias
 ON tb_veterinarios.id_veterinaria = tb_veterinarias.id_veterinaria
-
--- EJEMPLO DE MIN
- 
-SELECT MIN(`edad_veterinario`) AS EdadVeterinario FROM `tb_veterinarios`;
 
 CREATE TABLE tb_mascotas(
 	id_mascota INT AUTO_INCREMENT PRIMARY KEY,
