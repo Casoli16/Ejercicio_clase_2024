@@ -1,5 +1,3 @@
-DROP DATABASE Act1_DOC;
-
 CREATE DATABASE Act1_DOC;
 USE Act1_DOC;
 
@@ -191,10 +189,8 @@ SELECT MAX(`edad_veterinario`) AS Edad_Veterinario FROM `tb_veterinarios`;
 
 /*Ejemplo de ´Inner Join´*/
 -- Ejemplo Basico
-SELECT *
-FROM tb_veterinarios
-INNER JOIN tb_veterinarias
-ON tb_veterinarios.id_veterinaria = tb_veterinarias.id_veterinaria
+SELECT nombre_veterinario FROM tb_veterinarios inner JOIN 
+tb_horarios_veterinarios USING(id_horario_veterinario);
 
 -- Ejemplo Pulido
 SELECT tb_veterinarios.nombre_veterinario AS "Nombre",
@@ -227,10 +223,11 @@ SELECT COUNT(*) FROM tb_veterinarios
 SELECT COUNT(*) FROM tb_veterinarios
 WHERE edad_veterinario = 25
 
+
 -- Vistas con LEFT JOIN
 SELECT nombre_veterinario FROM tb_veterinarios LEFT JOIN 
-tb_horarios_veterinarios ON tb_veterinarios.id_horario_veterinario = tb_horarios_veterinarios.id_horario_veterinario;
+tb_horarios_veterinarios USING (id_horario_veterinario);
 
 -- Vistas con RIGHT JOIN
 SELECT nombre_veterinario FROM tb_veterinarios RIGHT JOIN 
-tb_horarios_veterinarios ON tb_veterinarios.id_horario_veterinario = tb_horarios_veterinarios.id_horario_veterinario;
+tb_horarios_veterinarios  USING(id_horario_veterinario);
