@@ -169,7 +169,7 @@ INSERT INTO tb_citas (causa_cita, observaciones_cita, fecha_cita, cantidad_citas
 VALUES ('Pelaje seco', 'Presenta pelaje reseco a falta de vitaminas', '2024-03-18', 5, 7.99);   
 
 -- EJEMPLO DE UNA SUBCONSULTA (De la tabla veterinarios queremos que seleccione el nombre de los veterinarios
--- que en la tabla veterinarias la direccion se encuentre en Mejicanos)
+-- donde en la tabla veterinarias la direccion se encuentre en Mejicanos)
 
 SELECT nombre_veterinario 
 FROM tb_veterinarios 
